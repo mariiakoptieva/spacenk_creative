@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New In: Mariia Koptieva — Marketing Graduate | Space NK Creative Task</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --white:#ffffff;
+  --ink:#101010;
+  --blush:#f6dbe0;
+  --blush-soft:#fbeef1;
+  --rose:#c9707f;
+  --stone:#f5f3f1;
+  --line:#e8e3e0;
+  --muted:#6f6a68;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;font-size:15px;line-height:1.6}
+img{display:block}
+a{color:inherit}
+
+/* ---------- Announcement marquee ---------- */
+.bar{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:9px 0;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.bar-track{display:inline-block;animation:marquee 28s linear infinite}
+.bar span{margin:0 28px}
+.bar b{color:var(--blush);font-weight:600}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- Nav ---------- */
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;line-height:1}
+.logo em{font-style:normal;color:var(--rose)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.bag-btn{position:relative;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:8px}
+.bag-count{background:var(--ink);color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.bag-count.pop{transform:scale(1.5);background:var(--rose)}
+
+/* ---------- Breadcrumb ---------- */
+.crumbs{max-width:1200px;margin:0 auto;padding:22px 40px 0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+
+/* ---------- PDP ---------- */
+.pdp{max-width:1200px;margin:0 auto;padding:28px 40px 70px;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}
+.pdp-media{position:relative}
+.pdp-img-wrap{position:relative;background:var(--stone);overflow:hidden;aspect-ratio:4/5}
+.pdp-img{width:100%;height:100%;object-fit:cover;object-position:top;transition:opacity .45s ease}
+.pdp-img.alt{position:absolute;inset:0;opacity:0}
+.pdp-img-wrap:hover .alt{opacity:1}
+.hover-quip{position:absolute;bottom:22px;left:50%;transform:translateX(-50%) rotate(-2deg) translateY(10px);background:#fff;padding:9px 20px;font-family:'Caveat',cursive;font-weight:600;font-size:22px;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,0.2);white-space:nowrap;opacity:0;transition:opacity .45s ease,transform .45s ease;z-index:3;pointer-events:none}
+.hover-quip::after{content:'';position:absolute;inset:3px;border:1px dashed rgba(0,0,0,0.15)}
+.pdp-img-wrap:hover .hover-quip{opacity:1;transform:translateX(-50%) rotate(-2deg) translateY(0)}
+.badge{position:absolute;top:16px;left:16px;background:var(--ink);color:#fff;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:7px 12px;z-index:2}
+.badge.pink{top:52px;background:var(--blush);color:var(--ink)}
+.script-note{font-family:'Caveat',cursive;font-size:26px;color:var(--rose);margin-top:14px;transform:rotate(-1.5deg)}
+
+.pdp-info{padding-top:6px}
+.pdp-brand{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.pdp-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(34px,4vw,50px);line-height:1.02;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.pdp-sub{font-size:14px;color:var(--muted);margin-bottom:14px}
+.stars{display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:13px}
+.stars a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.star{color:var(--ink);letter-spacing:2px}
+.pdp-price{display:flex;align-items:baseline;gap:12px;margin-bottom:24px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.price-main{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px}
+.price-note{font-size:12px;color:var(--muted)}
+
+.opt-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;color:var(--ink);font-weight:600}
+.opt-label span{color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{border:1px solid var(--line);padding:9px 16px;font-size:12px;cursor:pointer;background:#fff;transition:all .2s;font-family:'Inter',sans-serif}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.benefit-list{list-style:none;margin-bottom:26px;display:grid;gap:9px}
+.benefit-list li{font-size:13.5px;padding-left:22px;position:relative;color:#333}
+.benefit-list li::before{content:'♥';position:absolute;left:0;color:var(--rose);font-size:11px;top:2px}
+
+.add-btn{width:100%;background:var(--ink);color:#fff;border:none;padding:18px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:background .2s;position:relative;overflow:hidden}
+.add-btn:hover{background:#2c2c2c}
+.add-btn.added{background:var(--rose)}
+.stock-note{text-align:center;font-size:11.5px;color:var(--muted);margin-top:10px}
+.stock-note b{color:var(--rose);font-weight:600}
+
+/* accordions */
+.acc{margin-top:26px;border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{width:100%;background:none;border:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--ink)}
+.acc-head::after{content:'+';font-size:18px;font-weight:400;transition:transform .3s}
+.acc-item.open .acc-head::after{transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.acc-body-in{padding:0 0 18px;font-size:13.5px;color:#3a3a3a;line-height:1.75}
+.acc-body-in ul{list-style:none;display:grid;gap:6px}
+.acc-body-in li::before{content:'·';margin-right:8px;color:var(--rose);font-weight:700}
+
+/* ---------- Benefits strip ---------- */
+.strip{background:var(--blush-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip-in{max-width:1200px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.stat{text-align:center}
+.stat-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;line-height:1;margin-bottom:6px}
+.stat-num i{font-style:normal;color:var(--rose)}
+.stat-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Sections ---------- */
+.section{max-width:1200px;margin:0 auto;padding:76px 40px}
+.sec-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-weight:600}
+.sec-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(26px,3vw,38px);text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px}
+.sec-title .script{font-family:'Caveat',cursive;text-transform:none;font-weight:600;color:var(--rose);font-size:1.15em;letter-spacing:0}
+.sec-intro{font-size:14.5px;color:#3a3a3a;max-width:760px;line-height:1.8;margin-bottom:36px}
+
+/* spotlight layout */
+.spot-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:start}
+.spot-grid.flip{grid-template-columns:.9fr 1.1fr}
+.spot-facts{list-style:none;display:grid;gap:10px;margin:22px 0 26px}
+.spot-facts li{font-size:13.5px;padding-left:22px;position:relative;color:#333;line-height:1.7}
+.spot-facts li::before{content:'♥';position:absolute;left:0;color:var(--rose);font-size:11px;top:3px}
+.spot-facts b{font-weight:600}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px}
+.mini-stat{border:1px solid var(--line);padding:16px 12px;text-align:center;background:#fff}
+.mini-stat .n{font-family:'Archivo',sans-serif;font-weight:900;font-size:24px;line-height:1;margin-bottom:5px}
+.mini-stat .n i{font-style:normal;color:var(--rose)}
+.mini-stat .l{font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+
+/* brand tags */
+.brand-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.brand-tag{border:1px solid var(--ink);padding:8px 15px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;background:#fff}
+.brand-tag.hot{background:var(--blush);border-color:var(--blush)}
+.brand-tag.faint{border-color:var(--line);color:var(--muted)}
+
+/* masonry */
+.masonry{columns:3;column-gap:10px}
+.masonry img{width:100%;margin-bottom:10px;break-inside:avoid;transition:transform .35s ease,box-shadow .35s ease}
+.masonry img:hover{transform:scale(1.02);box-shadow:0 10px 26px rgba(0,0,0,0.12)}
+
+/* phone / reel frames */
+.reel-frame{width:250px;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background:#000;flex-shrink:0;box-shadow:0 16px 40px rgba(0,0,0,0.15)}
+.reel-frame iframe{width:100%;height:100%;display:block;border:0}
+.reel-row{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
+.reel-caption{font-family:'Caveat',cursive;font-size:22px;color:var(--rose);max-width:190px;line-height:1.35;padding-top:12px}
+
+/* screenshots */
+.shot{border:1px solid var(--line);width:100%}
+.shot-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:8px 0 16px}
+.shot-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.shot-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+
+/* quote card */
+.quote-card{background:var(--blush-soft);border:1px solid var(--blush);padding:26px;margin-top:24px}
+.quote-card .star{font-size:13px;display:block;margin-bottom:10px}
+.quote-card p{font-size:14px;line-height:1.8;color:#2c2c2c;margin-bottom:12px;font-style:italic}
+.quote-card .src{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-style:normal}
+.verified{color:var(--rose);font-size:11px;margin-left:6px}
+
+/* analytics card */
+.analytics{border:1px solid var(--ink);padding:24px;background:#fff;margin-bottom:14px}
+.analytics h4{font-family:'Archivo',sans-serif;font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.an-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.an-metric .v{font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;line-height:1}
+.an-metric .c{font-size:11px;color:var(--rose);font-weight:600;margin-top:2px}
+.an-metric .l{font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{border:1px solid var(--line);padding:26px;background:#fff;transition:transform .3s,box-shadow .3s}
+.review:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+.review .star{font-size:13px;margin-bottom:12px;display:block}
+.review-title{font-weight:600;font-size:14px;margin-bottom:8px}
+.review-body{font-size:13px;color:#444;margin-bottom:14px;line-height:1.7}
+.review-src{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+
+/* pitch band */
+.pitch{background:var(--ink);color:#fff}
+.pitch-in{max-width:1050px;margin:0 auto;padding:80px 40px;display:grid;grid-template-columns:1fr 260px;gap:56px;align-items:center}
+.pitch-script{font-family:'Caveat',cursive;font-size:30px;color:var(--blush);margin-bottom:18px}
+.pitch p{font-size:16px;line-height:1.9;color:#e8e4e2;margin-bottom:18px;font-weight:400}
+.pitch p b{color:#fff;font-weight:600}
+.pitch-sign{font-family:'Caveat',cursive;font-size:28px;color:var(--blush);margin-top:10px}
+.pitch .reel-frame{box-shadow:0 16px 44px rgba(0,0,0,0.5)}
+.pitch .shot-label{color:#9a9492}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 40px;text-align:center}
+.foot-links{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:18px}
+.foot-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:3px;transition:border-color .2s}
+.foot-links a:hover{border-color:var(--rose)}
+.foot-note{font-size:11px;color:var(--muted);line-height:1.8;max-width:560px;margin:0 auto}
+
+/* ---------- Bag drawer ---------- */
+.drawer-veil{position:fixed;inset:0;background:rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .3s;z-index:400}
+.drawer-veil.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:-420px;width:min(400px,92vw);height:100%;background:#fff;z-index:401;transition:right .4s cubic-bezier(.22,.8,.3,1);display:flex;flex-direction:column}
+.drawer.show{right:0}
+.drawer-head{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:14px}
+.drawer-close{background:none;border:none;font-size:22px;cursor:pointer;line-height:1}
+.drawer-body{flex:1;padding:26px;overflow-y:auto}
+.drawer-item{display:flex;gap:16px;border:1px solid var(--line);padding:14px}
+.drawer-item img{width:74px;height:92px;object-fit:cover;object-position:top}
+.di-name{font-weight:600;font-size:13px;margin-bottom:4px}
+.di-desc{font-size:11.5px;color:var(--muted);line-height:1.6}
+.di-price{font-size:12px;font-weight:600;margin-top:6px}
+.drawer-empty{color:var(--muted);font-size:13px;text-align:center;margin-top:40px}
+.drawer-foot{padding:22px 26px;border-top:1px solid var(--line)}
+.checkout-btn{display:block;width:100%;background:var(--ink);color:#fff;text-align:center;text-decoration:none;padding:16px;font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;transition:background .2s}
+.checkout-btn:hover{background:var(--rose)}
+.drawer-foot small{display:block;text-align:center;margin-top:10px;font-size:11px;color:var(--muted)}
+
+/* toast + hearts */
+.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,80px);background:var(--ink);color:#fff;padding:13px 26px;font-size:12px;letter-spacing:2px;text-transform:uppercase;z-index:500;transition:transform .4s cubic-bezier(.22,.8,.3,1);pointer-events:none}
+.toast.show{transform:translate(-50%,0)}
+.heart-float{position:fixed;font-size:18px;z-index:499;pointer-events:none;animation:floatUp 1.6s ease-out forwards;color:var(--rose)}
+@keyframes floatUp{0%{opacity:1;transform:translateY(0) scale(.6) rotate(0)}100%{opacity:0;transform:translateY(-140px) scale(1.3) rotate(20deg)}}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Scrapbook stickers ---------- */
+.sticker{position:absolute;font-family:'Caveat',cursive;font-weight:600;background:var(--blush);color:var(--ink);padding:8px 18px;font-size:21px;line-height:1.1;border-radius:3px;box-shadow:0 4px 12px rgba(0,0,0,0.12);z-index:5;pointer-events:none;white-space:nowrap}
+.sticker.white{background:#fff}
+.sticker.ink{background:var(--ink);color:var(--blush)}
+.sticker::after{content:'';position:absolute;inset:3px;border:1px dashed rgba(0,0,0,0.15);border-radius:2px}
+.sticker.ink::after{border-color:rgba(255,255,255,0.25)}
+.wiggle{animation:wiggle 5s ease-in-out infinite}
+@keyframes wiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(2deg)}}
+.wiggle2{animation:wiggle2 6s ease-in-out infinite}
+@keyframes wiggle2{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-2deg)}}
+
+.tape{position:absolute;width:92px;height:26px;background:rgba(246,219,224,0.85);top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);z-index:6;box-shadow:0 2px 5px rgba(0,0,0,0.08)}
+.tape::before,.tape::after{content:'';position:absolute;top:0;bottom:0;width:5px;background:repeating-linear-gradient(45deg,transparent,transparent 2px,rgba(255,255,255,0.6) 2px,rgba(255,255,255,0.6) 4px)}
+.tape::before{left:0}.tape::after{right:0}
+
+.heart-deco{position:absolute;color:var(--rose);pointer-events:none;z-index:5;animation:heartBob 4s ease-in-out infinite}
+@keyframes heartBob{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-7px) rotate(6deg)}}
+
+.polaroid{background:#fff;padding:10px 10px 34px;box-shadow:0 8px 24px rgba(0,0,0,0.14);position:relative}
+.polaroid .cap{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:'Caveat',cursive;font-size:18px;color:#4a4a4a}
+
+/* personality edit */
+.pol-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-bottom:52px}
+.pol-strip .polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.pol-strip .polaroid{transition:transform .3s ease}
+.pol-strip .polaroid:hover{transform:rotate(0deg) scale(1.04)!important;z-index:3}
+.fun-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fun-card{background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.fun-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(0,0,0,0.1)}
+.fun-card img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.fun-body{padding:16px 18px 20px}
+.fun-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.fun-body p{font-size:12.5px;color:var(--muted);line-height:1.65}
+
+/* ---------- Campaign concept deck (light, visual) ---------- */
+.camp{background:#fff;position:relative;overflow:hidden;border-top:1px solid var(--line)}
+.camp-in{max-width:1200px;margin:0 auto;padding:80px 40px}
+.camp-badge{display:inline-block;background:var(--ink);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:9px 18px;margin-bottom:18px}
+.camp-badge span{color:var(--blush)}
+.camp-hero{position:relative;margin:36px 0 14px}
+.camp-hero img{width:100%;aspect-ratio:16/8.5;object-fit:cover;display:block}
+.camp-hero-overlay{position:absolute;left:34px;bottom:34px;background:rgba(255,255,255,0.94);padding:22px 28px;max-width:420px;box-shadow:0 10px 30px rgba(0,0,0,0.18)}
+.camp-hero-overlay .k{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:8px}
+.camp-hero-overlay .t{font-family:'Archivo',sans-serif;font-weight:900;font-size:26px;text-transform:uppercase;line-height:1.05}
+.camp-hero-overlay .s{font-family:'Caveat',cursive;font-size:22px;color:var(--rose);margin-top:6px}
+.camp-hero-cap{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:40px}
+.camp-idea-box{background:var(--blush-soft);border:1px solid var(--blush);padding:30px 34px;max-width:860px;margin-bottom:48px;position:relative}
+.camp-idea-box .lab{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:10px}
+.camp-idea-box p{font-size:16px;line-height:1.85;color:#2c2c2c}
+.camp-idea-box p b{font-weight:600}
+.chan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.chan-card{background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+.chan-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(0,0,0,0.09);border-color:var(--rose)}
+.chan-head{background:var(--blush);padding:14px 18px}
+.chan-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:10px;letter-spacing:2px;color:var(--rose);margin-bottom:4px}
+.chan-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink)}
+.chan-body{padding:18px}
+.chan-body ul{list-style:none;display:grid;gap:9px}
+.chan-body li{font-size:12.5px;color:#3a3a3a;line-height:1.6;padding-left:16px;position:relative}
+.chan-body li::before{content:'♥';position:absolute;left:0;color:var(--rose);font-size:9px;top:3px}
+
+/* mock assets */
+.mock-row{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start;margin-bottom:52px}
+.mock-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-bottom:14px;font-weight:600}
+.mock-email{background:#fff;color:var(--ink);box-shadow:0 18px 44px rgba(0,0,0,0.14);border:1px solid var(--line)}
+.me-bar{background:var(--stone);padding:12px 20px;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line)}
+.me-bar b{color:var(--ink);display:block;font-size:12.5px;margin-bottom:2px}
+.me-hero{background:var(--blush);padding:44px 32px;text-align:center;position:relative}
+.me-kicker{font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;color:var(--ink)}
+.me-title{font-family:'Archivo',sans-serif;font-weight:900;font-size:32px;text-transform:uppercase;line-height:1.05;letter-spacing:.5px}
+.me-script{font-family:'Caveat',cursive;font-size:24px;color:var(--rose);margin-top:8px}
+.me-body{padding:26px 32px;font-size:13px;line-height:1.8;color:#3a3a3a}
+.me-body b{color:var(--ink)}
+.me-cta{display:inline-block;background:var(--ink);color:#fff;padding:13px 30px;font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;margin:4px 0 26px}
+.mock-ig{background:#fff;color:var(--ink);box-shadow:0 18px 44px rgba(0,0,0,0.14);border:1px solid var(--line);max-width:340px}
+.ig-head{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.ig-avatar{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:900;font-size:11px}
+.ig-name{font-size:12.5px;font-weight:600}
+.ig-loc{font-size:10.5px;color:var(--muted)}
+.ig-img{aspect-ratio:1/1;position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.ig-img>img{width:100%;height:100%;object-fit:cover}
+.ig-img-tag{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,0.94);padding:12px 16px}
+.ig-img-tag .k{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ig-img-tag .t{font-family:'Archivo',sans-serif;font-weight:900;font-size:16px;text-transform:uppercase;line-height:1.05}
+.ig-img-tag .s{font-family:'Caveat',cursive;font-size:17px;color:var(--rose)}
+.ig-caption{padding:12px 14px;font-size:11.5px;line-height:1.6;color:#3a3a3a;text-align:left}
+.ig-caption b{font-weight:600}
+/* KPI strip */
+.kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.kpi{border:1px solid var(--line);padding:18px 14px;text-align:center;background:#fff}
+.kpi .ch{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:600}
+.kpi .m{font-size:12px;color:#3a3a3a;line-height:1.5}
+.kpi.hl{border-color:var(--rose);background:var(--blush-soft)}
+.camp-foot{margin-top:34px;font-size:12px;color:var(--muted);line-height:1.7;max-width:640px}
+
+.bag-sticker{position:absolute;z-index:5;pointer-events:none;filter:drop-shadow(0 5px 10px rgba(0,0,0,0.18))}
+
+/* brief-style wordmark sticker: bold caps on white blob + pink script beneath */
+.wordmark-sticker{position:absolute;z-index:6;pointer-events:none;background:#fff;padding:14px 22px 8px;box-shadow:0 6px 18px rgba(0,0,0,0.14);border-radius:4px;text-align:center}
+.wordmark-sticker::before{content:'';position:absolute;inset:-6px;background:var(--blush-soft);z-index:-1;border-radius:8px;transform:rotate(-1deg)}
+.wm-caps{font-family:'Archivo',sans-serif;font-weight:900;font-size:24px;letter-spacing:1px;line-height:1;color:var(--ink)}
+.wm-script{font-family:'Caveat',cursive;font-weight:600;font-size:24px;color:var(--rose);margin-top:-2px;transform:rotate(-3deg)}
+
+/* notebook paper pitch */
+.paper{background:#fdfcfa;background-image:repeating-linear-gradient(to bottom,transparent,transparent 31px,#dce8f0 31px,#dce8f0 32px);position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.paper::before{content:'';position:absolute;top:0;bottom:0;left:56px;width:2px;background:rgba(230,140,150,0.45)}
+.paper-in{max-width:1050px;margin:0 auto;padding:84px 40px 90px;display:grid;grid-template-columns:1fr 260px;gap:56px;align-items:center;position:relative}
+.paper-title{font-family:'Caveat',cursive;font-size:44px;font-weight:600;color:var(--ink);margin-bottom:20px;position:relative;display:inline-block}
+.paper-title mark{background:var(--blush);padding:2px 12px;color:var(--ink)}
+.paper p{font-size:16px;line-height:32px;color:#2c2c2c;margin-bottom:16px}
+.paper p b{font-weight:600}
+.paper-sign{font-family:'Caveat',cursive;font-size:30px;color:var(--rose);margin-top:8px}
+.portfolio-btn{display:block;width:100%;background:var(--ink);color:#fff;text-align:center;text-decoration:none;padding:17px 10px;margin-top:16px;font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;transition:background .2s,transform .2s;box-shadow:0 8px 22px rgba(0,0,0,0.18)}
+.portfolio-btn:hover{background:var(--rose);transform:translateY(-2px)}
+
+/* why space nk */
+.why-snk{background:var(--stone);border-top:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-card{background:#fff;border:1px solid var(--line);padding:28px 24px;position:relative;transition:transform .3s,box-shadow .3s}
+.why-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(0,0,0,0.08)}
+.why-num{font-family:'Caveat',cursive;font-weight:600;font-size:34px;color:var(--rose);line-height:1;margin-bottom:12px}
+.why-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.why-card p{font-size:13px;color:#3a3a3a;line-height:1.7}
+.why-card p b{font-weight:600}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+@media (max-width:900px){
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+  .pdp{grid-template-columns:1fr;gap:36px;padding:24px 20px 56px}
+  .crumbs{padding:18px 20px 0}
+  .strip-in{grid-template-columns:repeat(2,1fr);padding:36px 20px;gap:26px}
+  .section{padding:56px 20px}
+  .spot-grid,.spot-grid.flip{grid-template-columns:1fr;gap:32px}
+  .masonry{columns:2}
+  .reviews{grid-template-columns:1fr}
+  .pitch-in,.paper-in{grid-template-columns:1fr;padding:60px 24px;justify-items:center;text-align:center}
+  .paper::before{left:24px}
+  .mini-stats{grid-template-columns:repeat(3,1fr)}
+  .pol-strip{grid-template-columns:repeat(2,1fr);gap:18px}
+  .fun-cards{grid-template-columns:1fr 1fr;gap:12px}
+  .camp-in{padding:60px 20px}
+  .chan-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .mock-row{grid-template-columns:1fr;gap:32px}
+  .mock-ig{max-width:100%}
+  .kpi-strip{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .sticker,.bag-sticker,.heart-deco,.wordmark-sticker{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="bar" aria-hidden="true">
+  <div class="bar-track">
+    <span>NEW IN · <b>THE GRADUATE EDIT 2026</b></span><span>FREE AMBITION WITH EVERY ORDER</span><span>AVAILABLE FROM SEPTEMBER 2026</span><span>ONE OF A KIND · WHILE STOCKS LAST</span><span>NEW IN · <b>THE GRADUATE EDIT 2026</b></span><span>FREE AMBITION WITH EVERY ORDER</span><span>AVAILABLE FROM SEPTEMBER 2026</span><span>ONE OF A KIND · WHILE STOCKS LAST</span>
+  </div>
+</div>
+
+<nav>
+  <a class="logo" href="#">MARIIA<em>&nbsp;K.</em></a>
+  <ul class="nav-links">
+    <li><a href="#beauty">Beauty Activations</a></li>
+    <li><a href="#rwc">Royal Wharf</a></li>
+    <li><a href="#qmul">Ukrainian Society</a></li>
+    <li><a href="#campaign">Campaign Concept</a></li>
+    <li><a href="#why">Why Me</a></li>
+  </ul>
+  <button class="bag-btn" id="bagBtn" aria-label="Open team bag">Team Bag <span class="bag-count" id="bagCount">0</span></button>
+</nav>
+
+<div class="crumbs">Home / New In / Marketing Graduates / <b>Mariia Koptieva</b></div>
+
+<section class="pdp" style="position:relative">
+  <div class="pdp-media reveal">
+    <div class="pdp-img-wrap">
+      <span class="badge">New In</span>
+      <span class="badge pink">One of a kind</span>
+      <img class="pdp-img" src="https://mariiakoptieva.github.io/spacenk/IMG_8399.jpeg" alt="Mariia Koptieva">
+      <img class="pdp-img alt" src="IMG_8356.jpeg" alt="Mariia at the Kayali pop-up activation" loading="lazy">
+      <div class="hover-quip">see? already packed & ready to go ♡</div>
+    </div>
+    <div class="sticker wiggle" style="bottom:52px;right:-18px">grad scheme 2026 ♡</div>
+    <div class="heart-deco" style="top:-10px;right:22px;font-size:26px">♥</div>
+    <div class="heart-deco" style="top:26px;right:-6px;font-size:15px;animation-delay:1.2s">♥</div>
+    <div class="wordmark-sticker wiggle2" style="top:-26px;left:-22px">
+      <div class="wm-caps">GRAD SCHEME</div>
+      <div class="wm-script">the 2026 edit</div>
+    </div>
+    <div class="script-note">hover — every product deserves a second angle ♡</div>
+    <div class="polaroid reveal" style="margin-top:26px;transform:rotate(-1.5deg);position:relative">
+      <div class="tape"></div>
+      <img src="IMG_1198.jpeg" alt="Mariia trying a lip gloss in Covent Garden" loading="lazy" style="width:100%">
+      <div class="cap">field research — someone has to test the products ♡</div>
+      <svg class="bag-sticker wiggle2" style="right:-22px;bottom:-16px;width:64px" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="12" y="32" width="76" height="72" fill="#101010"/>
+        <path d="M32 32 v-8 a18 18 0 0 1 36 0 v8" fill="none" stroke="#101010" stroke-width="5"/>
+        <path d="M42 22 q8 -10 16 0 q-8 8 -16 0" fill="#f6dbe0"/>
+        <text x="50" y="76" text-anchor="middle" fill="#ffffff" font-family="Archivo,sans-serif" font-weight="900" font-size="20" letter-spacing="1">MK</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="pdp-info">
+    <div class="pdp-brand reveal">Space NK Graduate Edit</div>
+    <h1 class="pdp-name reveal">Mariia<br>Koptieva</h1>
+    <p class="pdp-sub reveal">The Multi-Channel Marketing Graduate · 12-Month Rotational Formula</p>
+    <div class="stars reveal">
+      <span class="star">★★★★★</span> <b>5.0</b> <a href="#reviews">Read the results</a>
+    </div>
+    <div class="pdp-price reveal">
+      <span class="price-main">First Class Honours</span>
+      <span class="price-note">BSc Business Management, Queen Mary University of London · Class of 2026</span>
+    </div>
+
+    <div class="reveal">
+      <div class="opt-label">Select rotation <span>— works beautifully across all channels</span></div>
+      <div class="chips" id="chips">
+        <button class="chip on">Email Marketing</button>
+        <button class="chip">Social Media</button>
+        <button class="chip">Paid Media</button>
+        <button class="chip">Local Marketing</button>
+      </div>
+    </div>
+
+    <ul class="benefit-list reveal">
+      <li>Marketing & consulting internships — content, email and campaign reporting at Royal Wharf Clinic, plus a student consultancy project pitched to IBM mentors</li>
+      <li>Beauty brand activations & pop-ups — Charlotte Tilbury, Rare Beauty, Huda Beauty, Sephora, Kayali, Laneige and many more</li>
+      <li>Events & conferences — Economist Impact, ADCon, Optimove Connect, leading on-site teams of up to 10</li>
+      <li>Social Media & Marketing Manager and Treasurer, QMUL Ukrainian Society — followers doubled, membership tripled, £2,500+ raised</li>
+      <li>All of it built alongside full-time studies — and still graduated with a First</li>
+      <li>Contains 4 languages: English, Ukrainian, Russian and basic German</li>
+      <li>Designed to develop — everything so far was learned hands-on; what I want most now is to be taught properly, across every channel</li>
+      <li>N.dulge member — knows the customer because she is one</li>
+      <li>Comes with a bonus inside: <a href="#campaign" style="color:var(--rose);font-weight:600;text-decoration:underline;text-underline-offset:3px">a campaign concept I created for Space NK</a> — scroll to the end ♡</li>
+    </ul>
+
+    <button class="add-btn reveal" id="addBtn">Add to Team — Free Delivery, London</button>
+    <div class="stock-note reveal"><b>Only 1 available.</b> Full UK right to work · no sponsorship required, now or ever · ready for September 2026</div>
+
+    <div class="acc reveal">
+      <div class="acc-item">
+        <button class="acc-head">Key Ingredients</button>
+        <div class="acc-body"><div class="acc-body-in">
+          <ul>
+            <li><b>Social & Content</b> — grew QMUL Ukrainian Society from 500 to 1,000+ followers, 63K+ monthly views, full pipeline from ideation to publishing</li>
+            <li><b>Email Marketing</b> — wrote patient and subscriber communications at Royal Wharf Clinic, on-brand and conversion-focused</li>
+            <li><b>Analysis & Reporting</b> — advanced Excel, post-campaign reports capturing 50+ qualified leads per campaign, monthly KPI insights presented to committee</li>
+            <li><b>Brand Experience</b> — face-to-face customer engagement and influencer hosting at experiential pop-ups across London</li>
+            <li><b>Finishing notes</b> — Inside LVMH Certificate, Google Digital Marketing Foundations, QMUL prize for proactive seminar engagement</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">How to Use</button>
+        <div class="acc-body"><div class="acc-body-in">
+          Apply directly to your marketing team from September 2026. Rotate every four months across three placements for best results. Combine with real briefs, live campaigns and honest feedback — absorbs quickly and improves visibly with each use. Responds especially well to being challenged: give it something it hasn't done before and watch it learn. Suitable for daily use, including store openings, content shoots and customer events.
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">Delivery & Returns</button>
+        <div class="acc-body"><div class="acc-body-in">
+          Available immediately, based in London, with full UK right to work — no sponsorship required, now or at any point in the future. Returns are not expected — this graduate is applying to stay and grow with Space NK.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-in">
+    <div class="stat reveal"><div class="stat-num">100<i>M+</i></div><div class="stat-label">Organic views contributed to<br>at Royal Wharf Clinic</div></div>
+    <div class="stat reveal"><div class="stat-num">+100<i>%</i></div><div class="stat-label">Follower growth,<br>QMUL Ukrainian Society</div></div>
+    <div class="stat reveal"><div class="stat-num">50<i>+</i></div><div class="stat-label">Qualified leads captured<br>per activation campaign</div></div>
+    <div class="stat reveal"><div class="stat-num">300<i>+</i></div><div class="stat-label">Customer interactions<br>per activation</div></div>
+  </div>
+</div>
+
+<!-- ============ SPOTLIGHT 01: BEAUTY ACTIVATIONS ============ -->
+<section class="section" id="beauty" style="position:relative">
+  <div class="sticker wiggle" style="top:64px;right:60px">the beauty edit ♡</div>
+  <div class="heart-deco" style="top:150px;right:44px;font-size:20px">♥</div>
+  <svg class="bag-sticker wiggle2" style="top:52px;right:220px;width:64px" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g transform="rotate(6 50 55)">
+      <rect x="12" y="32" width="76" height="72" fill="#101010"/>
+      <path d="M32 32 v-8 a18 18 0 0 1 36 0 v8" fill="none" stroke="#101010" stroke-width="5"/>
+      <path d="M42 22 q8 -10 16 0 q-8 8 -16 0" fill="#f6dbe0"/>
+      <text x="50" y="76" text-anchor="middle" fill="#f6dbe0" font-size="26">♥</text>
+    </g>
+  </svg>
+  <div class="sec-eyebrow reveal">Inside the formula · 01</div>
+  <h2 class="sec-title reveal">The beauty <span class="script">bestsellers</span> edit</h2>
+  <p class="sec-intro reveal">The brands your customers queue for — Charlotte Tilbury, Rare Beauty, Huda Beauty, Sephora, Kayali, Laneige — I've worked with them from the inside. At experiential pop-ups, events and product launches across London, I engage customers face-to-face, host influencers of all sizes, pitch at exhibitor stands, and write the post-event reports that measure what worked. I've seen how beauty campaigns are built, briefed, delivered and judged — the exact perspective I'd bring to your Local Marketing rotation.</p>
+
+  <div class="spot-grid">
+    <div class="reveal">
+      <div class="masonry">
+        <div class="polaroid" style="margin-bottom:10px;break-inside:avoid;transform:rotate(-1.5deg)">
+          <div class="tape"></div>
+          <img src="https://mariiakoptieva.github.io/spacenk/IMG_8373.jpeg" alt="Kayali activation" loading="lazy" style="width:100%">
+          <div class="cap">kayali house party ♡</div>
+        </div>
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8355.jpeg" alt="Rare Beauty x Sephora launch" loading="lazy">
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8359.jpeg" alt="Laneige Covent Garden pop-up" loading="lazy">
+        <img src="IMG_1089.jpeg" alt="SACHEU beauty truck activation" loading="lazy">
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8357.jpeg" alt="Kayali House Party venue" loading="lazy">
+        <div class="polaroid" style="margin-bottom:10px;break-inside:avoid;transform:rotate(1.8deg)">
+          <div class="tape" style="transform:translateX(-50%) rotate(4deg)"></div>
+          <img src="https://mariiakoptieva.github.io/spacenk/IMG_8395.jpeg" alt="Rare Beauty x Sephora" loading="lazy" style="width:100%">
+          <div class="cap">rare beauty × sephora</div>
+        </div>
+        <div class="polaroid" style="margin-bottom:10px;break-inside:avoid;transform:rotate(-2deg)">
+          <div class="tape" style="transform:translateX(-50%) rotate(-5deg)"></div>
+          <img src="IMG_8864.jpeg" alt="Huda Beauty pop-up at King's Cross" loading="lazy" style="width:100%">
+          <div class="cap">huda beauty takeover ♡</div>
+        </div>
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8372_2.jpeg" alt="BYOMA activation team" loading="lazy">
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8354.jpeg" alt="Kayali team" loading="lazy">
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8376.jpeg" alt="Laneige team" loading="lazy">
+        <img src="IMG_1342.jpeg" alt="Women and the World International Film Festival" loading="lazy">
+        <img src="https://mariiakoptieva.github.io/spacenk/IMG_8374_2.jpeg" alt="BYOMA mascot" loading="lazy">
+      </div>
+    </div>
+    <div>
+      <div class="reveal">
+        <div class="opt-label">Shop by brand <span>— all worked with, in person</span></div>
+        <div class="brand-tags">
+          <span class="brand-tag hot">Charlotte Tilbury</span>
+          <span class="brand-tag hot">Rare Beauty</span>
+          <span class="brand-tag hot">Huda Beauty</span>
+          <span class="brand-tag hot">Sephora</span>
+          <span class="brand-tag hot">Kayali</span>
+          <span class="brand-tag hot">Laneige</span>
+          <span class="brand-tag hot">BYOMA</span>
+          <span class="brand-tag">Amazon</span>
+          <span class="brand-tag">Vodafone</span>
+          <span class="brand-tag">Spotify</span>
+          <span class="brand-tag">Zoom</span>
+          <span class="brand-tag">Deliveroo</span>
+          <span class="brand-tag faint">…and many more</span>
+        </div>
+      </div>
+      <ul class="spot-facts reveal">
+        <li><b>Face-to-face brand experience</b> — engaging 300+ potential customers per event at pop-ups, product launches and activations across London, driving discovery and trial the way Space NK stores do every day</li>
+        <li><b>Team leadership on-site</b> — led teams of up to 5–10 staff, delegating roles and ensuring seamless delivery in fast-paced, high-pressure environments</li>
+        <li><b>Influencer hosting</b> — coordinated creators of all sizes on-site, managing their experience and keeping brand representation seamless</li>
+        <li><b>Commercial follow-through</b> — post-event reporting and feedback surveys capturing 50+ qualified leads per campaign, with insights contributing to a 15% rise in follow-up engagement</li>
+      </ul>
+      <div class="mini-stats reveal">
+        <div class="mini-stat"><div class="n">300<i>+</i></div><div class="l">Interactions / event</div></div>
+        <div class="mini-stat"><div class="n">50<i>+</i></div><div class="l">Leads / campaign</div></div>
+        <div class="mini-stat"><div class="n">+15<i>%</i></div><div class="l">Follow-up uplift</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPOTLIGHT 02: ROYAL WHARF CLINIC ============ -->
+<section class="section" id="rwc" style="background:var(--stone);max-width:none;position:relative">
+  <div style="max-width:1200px;margin:0 auto;position:relative">
+  <div class="sticker ink wiggle2" style="top:-14px;right:40px">filmed, edited, approved ✓</div>
+  <div class="heart-deco" style="top:66px;right:30px;font-size:17px;animation-delay:.8s">♥</div>
+  <div class="sec-eyebrow reveal">Inside the formula · 02</div>
+  <h2 class="sec-title reveal">Content that <span class="script">converts</span></h2>
+  <p class="sec-intro reveal">Marketing & Content Creation Intern at Royal Wharf Clinic — a fast-paced environment where channels had already hit 80K+ TikTok followers and 100M+ organic views, and every piece of my work was tied to measurable business outcomes. Social content, email marketing, competitor analysis, campaign reporting: the exact mix of this scheme's rotations, practised for real.</p>
+
+  <div class="spot-grid flip">
+    <div>
+      <div class="reel-row reveal">
+        <div class="reel-frame">
+          <iframe src="https://www.youtube.com/embed/QhC_bGItbnU?playsinline=1&rel=0" title="Reel created for Royal Wharf Clinic" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="reel-caption">a reel I scripted, filmed & edited — approved by the Head of Marketing ♡</div>
+      </div>
+      <div style="margin-top:24px" class="reveal">
+        <div class="shot-label">The channels I created for</div>
+        <div class="shot-grid-2">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8404.jpeg" alt="Clinic TikTok profile — 80.6K followers" loading="lazy">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8405.jpeg" alt="Dr Shaan Instagram profile — 256K followers" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul class="spot-facts reveal">
+        <li><b>Filmed, edited & strategised</b> TikTok and Instagram content for @dr.shaan.mbbs (256K Instagram) and @londonsuperclinic (80.6K TikTok)</li>
+        <li><b>Platform-native hooks & CTAs</b> — every piece of content built around conversion, tied directly to revenue</li>
+        <li><b>Email marketing</b> — wrote communications for the clinic's patient and subscriber base, on-brand, clear and conversion-focused</li>
+        <li><b>Cross-platform competitor analysis</b> to identify market gaps, plus an SEO-optimised, clinically backed blog</li>
+        <li><b>Presented a campaign report to the Head of Marketing</b> — recognised for strategic thinking and attention to detail</li>
+      </ul>
+      <div class="mini-stats reveal">
+        <div class="mini-stat"><div class="n">100<i>M+</i></div><div class="l">Clinic organic views</div></div>
+        <div class="mini-stat"><div class="n">256<i>K</i></div><div class="l">Dr Shaan IG followers</div></div>
+        <div class="mini-stat"><div class="n">80.6<i>K</i></div><div class="l">Clinic TikTok followers</div></div>
+      </div>
+      <div class="quote-card reveal">
+        <span class="star">★★★★★</span>
+        <p>"Proud of everything you've achieved during your time with us, Mariia. Your work ethic, creativity and willingness to learn have been outstanding from day one."</p>
+        <div class="src">Syed Izhaan Habeeb · Head of Marketing, Royal Wharf Clinic <span class="verified">✓ Verified review</span></div>
+        <img class="shot" style="margin-top:14px" src="https://mariiakoptieva.github.io/spacenk/Image%2006-05-2026%20at%2023.04.jpeg" alt="LinkedIn feedback from Head of Marketing" loading="lazy">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ SPOTLIGHT 03: QMUL UKRAINIAN SOCIETY ============ -->
+<section class="section" id="qmul" style="position:relative">
+  <div class="sticker white wiggle" style="top:58px;right:56px">500 → 1,000 followers ♡</div>
+  <div class="sec-eyebrow reveal">Inside the formula · 03</div>
+  <h2 class="sec-title reveal">Community, <span class="script">built from scratch</span></h2>
+  <p class="sec-intro reveal">Space NK built a flourishing community around discovering beauty. I know what building a community takes, because I've done it — as the sole creator behind the QMUL Ukrainian Society's channels: strategy, filming, editing, posting, analysing. All of it, independently, alongside full-time studies. I taught myself every step of it — which is exactly why I want this scheme: to learn how specialists do it, at scale, with real feedback.</p>
+
+  <div class="spot-grid">
+    <div>
+      <ul class="spot-facts reveal">
+        <li><b>Grew followers 500 → 1,004</b> (+100%) and paid membership 18 → 56 (+211%) — tracking and reporting on every step</li>
+        <li><b>63,027 views in a single month</b> with 6,709 accounts reached (+191.9%) — monitoring analytics to inform every next move</li>
+        <li><b>Built a full performance reporting system</b> — monthly metrics, growth trends and engagement breakdowns presented to the committee</li>
+        <li><b>Created content for high-profile events</b> — a Careers Forum with Goldman Sachs, Estée Lauder and Mayer Brown, Diplomatic Talks, and cultural exhibitions</li>
+        <li><b>Also Treasurer</b> — managed society finances and raised £2,500+ across events</li>
+      </ul>
+      <div class="reel-row reveal" style="margin-top:26px">
+        <div class="reel-frame">
+          <iframe src="https://www.youtube.com/embed/dXS2LRFSuUg?playsinline=1&rel=0" title="Reel created for QMUL Ukrainian Society" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="reel-caption">from concept to final cut — reels I made for the society ♡</div>
+      </div>
+    </div>
+    <div>
+      <div class="analytics reveal">
+        <h4>Instagram Analytics · 9 Feb – 9 Mar 2025</h4>
+        <div class="an-grid">
+          <div class="an-metric"><div class="v">63,027</div><div class="l">Total views</div></div>
+          <div class="an-metric"><div class="v">6,709</div><div class="c">+191.9%</div><div class="l">Accounts reached</div></div>
+          <div class="an-metric"><div class="v">1,580</div><div class="c">+159.0%</div><div class="l">Profile visits</div></div>
+          <div class="an-metric"><div class="v">105</div><div class="c">+377.3%</div><div class="l">Link taps</div></div>
+          <div class="an-metric"><div class="v">51%</div><div class="l">Non-follower views</div></div>
+          <div class="an-metric"><div class="v">1,685</div><div class="c">+166.6%</div><div class="l">Profile activity</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="shot-label">Straight from the analytics dashboard</div>
+        <div class="shot-grid-3">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8329.jpeg" alt="Instagram analytics — views" loading="lazy">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8330.jpeg" alt="Instagram analytics — content type" loading="lazy">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8331.jpeg" alt="Instagram analytics — profile activity" loading="lazy">
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:14px">
+        <div class="shot-label">The feed I built</div>
+        <div class="shot-grid-2">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8400.jpeg" alt="Society Instagram grid" loading="lazy">
+          <img class="shot" src="https://mariiakoptieva.github.io/spacenk/IMG_8401.jpeg" alt="Society Instagram grid" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section" id="reviews" style="padding-top:0;position:relative">
+  <div class="sticker white wiggle2" style="top:-8px;right:64px">so obsessed ♡</div>
+  <svg class="bag-sticker wiggle" style="top:-22px;right:230px;width:56px" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g transform="rotate(-5 50 55)">
+      <rect x="12" y="32" width="76" height="72" fill="#101010"/>
+      <path d="M32 32 v-8 a18 18 0 0 1 36 0 v8" fill="none" stroke="#101010" stroke-width="5"/>
+      <path d="M42 22 q8 -10 16 0 q-8 8 -16 0" fill="#f6dbe0"/>
+      <text x="50" y="72" text-anchor="middle" fill="#ffffff" font-family="Archivo,sans-serif" font-weight="900" font-size="13" letter-spacing="1">5★</text>
+      <text x="50" y="90" text-anchor="middle" fill="#f6dbe0" font-size="18">♥</text>
+    </g>
+  </svg>
+  <div class="sec-eyebrow reveal">★★★★★ · Verified results</div>
+  <h2 class="sec-title reveal">The reviews are <span class="script">glowing</span></h2>
+  <div class="reviews" style="margin-top:20px">
+    <div class="review reveal">
+      <span class="star">★★★★★</span>
+      <div class="review-title">"Instagram doubled, membership tripled"</div>
+      <p class="review-body">Grew followers 500 → 1,000+ and paid membership 18 → 56 in one year, hitting 63,000+ monthly views — while building the reporting system that tracked it all.</p>
+      <div class="review-src">QMUL Ukrainian Society <span class="verified">✓ Verified role</span></div>
+    </div>
+    <div class="review reveal">
+      <span class="star">★★★★★</span>
+      <div class="review-title">"Strategic thinking, noticed at the top"</div>
+      <p class="review-body">Produced and presented a campaign report to the Head of Marketing, earning recognition for strategic thinking and attention to detail during the internship.</p>
+      <div class="review-src">Royal Wharf Clinic <span class="verified">✓ Verified internship</span></div>
+    </div>
+    <div class="review reveal">
+      <span class="star">★★★★★</span>
+      <div class="review-title">"85% in Persuasive Strategies in Marketing"</div>
+      <p class="review-body">79% in Strategic Marketing, 85% in Persuasive Strategies, plus a QMUL prize for proactive seminar engagement. The theory is as strong as the practice.</p>
+      <div class="review-src">Queen Mary University of London <span class="verified">✓ Verified grades</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONALITY EDIT ============ -->
+<section class="section" id="personality" style="position:relative;background:var(--blush-soft);max-width:none;border-top:1px solid var(--line)">
+  <div style="max-width:1200px;margin:0 auto;position:relative">
+  <div class="sticker wiggle" style="top:-10px;right:48px">the person behind the product ♡</div>
+  <div class="heart-deco" style="top:64px;right:36px;font-size:18px;animation-delay:.6s">♥</div>
+  <div class="sec-eyebrow reveal">Beyond the formula</div>
+  <h2 class="sec-title reveal">The personality <span class="script">edit</span></h2>
+  <p class="sec-intro reveal">The brief asked for creativity, interests and individuality — so here's the individuality. Multilingual (English, Ukrainian, Russian, basic German), permanently curious, and yes, that really is me jumping off a crane.</p>
+
+  <div class="pol-strip">
+    <div class="polaroid reveal" style="transform:rotate(-3deg)">
+      <div class="tape"></div>
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_5383.jpeg" alt="Paris, at the Louvre" loading="lazy">
+      <div class="cap">paris ♡ always</div>
+    </div>
+    <div class="polaroid reveal" style="transform:rotate(2deg);margin-top:22px">
+      <div class="tape" style="transform:translateX(-50%) rotate(5deg)"></div>
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8408.jpeg" alt="Hollywood" loading="lazy">
+      <div class="cap">LA trip</div>
+    </div>
+    <div class="polaroid reveal" style="transform:rotate(-1.5deg)">
+      <div class="tape" style="transform:translateX(-50%) rotate(-6deg)"></div>
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8412.jpeg" alt="Greece" loading="lazy">
+      <div class="cap">greece, obviously</div>
+    </div>
+    <div class="polaroid reveal" style="transform:rotate(2.5deg);margin-top:18px">
+      <div class="tape"></div>
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8410.jpeg" alt="Hollywood sign" loading="lazy">
+      <div class="cap">found the sign ♡</div>
+    </div>
+  </div>
+
+  <div class="fun-cards">
+    <div class="fun-card reveal">
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8414.jpeg" alt="Bungee jumping from a crane" loading="lazy">
+      <div class="fun-body">
+        <div class="fun-title">Yes, I bungee jumped.</div>
+        <p>If you need someone to jump into something new without hesitation — I've literally done it from a crane.</p>
+      </div>
+    </div>
+    <div class="fun-card reveal">
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8409.jpeg" alt="Padel rackets" loading="lazy">
+      <div class="fun-body">
+        <div class="fun-title">Padel & Pilates</div>
+        <p>Competitive on the court, grounded in the studio. Balance is everything.</p>
+      </div>
+    </div>
+    <div class="fun-card reveal">
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8413.jpeg" alt="With a dog" loading="lazy">
+      <div class="fun-body">
+        <div class="fun-title">Dog person</div>
+        <p>Unconditional love, zero corporate politics. Dogs just get it.</p>
+      </div>
+    </div>
+    <div class="fun-card reveal">
+      <img src="https://mariiakoptieva.github.io/spacenk/IMG_8178.jpeg" alt="Reading in the park" loading="lazy">
+      <div class="fun-body">
+        <div class="fun-title">Always reading</div>
+        <p>Parks, coffee shops, long flights. There's always a book on the go.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ WHY SPACE NK ============ -->
+<section class="section why-snk" id="whysnk" style="max-width:none;position:relative">
+  <div style="max-width:1200px;margin:0 auto;position:relative">
+  <div class="sticker wiggle2" style="top:-12px;right:52px">and no one else ♡</div>
+  <div class="sec-eyebrow reveal">The honest answer</div>
+  <h2 class="sec-title reveal">Why Space NK, <span class="script">specifically</span></h2>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-num">01</div>
+      <div class="why-title">Curation is the product</div>
+      <p>Anyone can stock 10,000 SKUs. Space NK's edge is <b>choosing</b> — 100+ brands, every one earning its shelf. That's a marketing philosophy, not just a retail model, and it's exactly how I work: fewer things, done deliberately.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">02</div>
+      <div class="why-title">I'm already the customer</div>
+      <p>N.dulge member, regular in-store. I've experienced the discovery Space NK sells — <b>the recommendation you didn't know you needed</b> — and I know what it feels like when it works. You can't fake that perspective; I'd be marketing something I genuinely buy.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">03</div>
+      <div class="why-title">The stores I've worked, the stores you run</div>
+      <p>My experience is face-to-face beauty retail — activations, launches, customers mid-decision. Space NK is one of the few beauty businesses where <b>stores are the heart of the brand</b>, not an afterthought to e-commerce. My experience means the most here.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">04</div>
+      <div class="why-title">The scheme is built how I learn</div>
+      <p>Rotations, real campaigns, specialists to learn from — not a year of shadowing. I've proven I absorb fast when given real responsibility. <b>This structure turns that into a career</b>, and I want to build it here, not use it as a stepping stone.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ SPEC CAMPAIGN: THE NEIGHBOURHOOD EDIT ============ -->
+<section class="camp" id="campaign">
+  <div class="camp-in" style="position:relative">
+    <div class="sticker wiggle" style="top:64px;right:44px">my idea for you ♡</div>
+    <div class="camp-badge reveal">Campaign Concept · <span>created by Mariia for this application</span></div>
+    <h2 class="sec-title reveal" style="margin-bottom:6px">The Neighbourhood <span class="script">Edit</span></h2>
+    <p class="sec-intro reveal" style="margin-bottom:0">One campaign idea, told across all four rotations of this scheme — because that's what the scheme is about.</p>
+
+    <div class="camp-hero reveal">
+      <img src="spacenk-store.jpg" alt="Space NK neighbourhood store with customers outside">
+      <div class="camp-hero-overlay">
+        <div class="k">The Neighbourhood Edit · No. 01</div>
+        <div class="t">Every store<br>gets a voice</div>
+        <div class="s">starting with yours ♡</div>
+      </div>
+    </div>
+    <div class="camp-hero-cap reveal">The idea, in one image: the neighbourhood store as the hero of the campaign</div>
+
+    <div class="camp-idea-box reveal">
+      <div class="lab">The idea in 30 seconds</div>
+      <p>People trust a recommendation from <b>someone who shops where they shop</b> — but beauty retail speaks to every postcode with one national voice. So: each month, one Space NK store becomes <b>the Neighbourhood Edit</b>. A local curator — a micro-influencer, a store expert, or a loyal N.dulge customer — picks their five essentials. Their shelf goes in-store, their story goes on every channel, their neighbourhood gets invited in. <b>Twelve months, twelve neighbourhoods.</b></p>
+    </div>
+
+    <div class="mock-label reveal">One idea · four rotations</div>
+    <div class="chan-grid">
+      <div class="chan-card reveal">
+        <div class="chan-head"><div class="chan-num">ROTATION 01</div><div class="chan-name">Local Marketing</div></div>
+        <div class="chan-body"><ul>
+          <li>Curator's five-product shelf in-store, with "why I love this" notes</li>
+          <li>Launch evening hosted by the curator — the event format I've delivered at activations</li>
+        </ul></div>
+      </div>
+      <div class="chan-card reveal">
+        <div class="chan-head"><div class="chan-num">ROTATION 02</div><div class="chan-name">Social Media</div></div>
+        <div class="chan-body"><ul>
+          <li>Curator reels & carousels: shelf tour, "5 products, 1 neighbourhood"</li>
+          <li>UGC: locals post their top five with the hashtag to become the next curator</li>
+        </ul></div>
+      </div>
+      <div class="chan-card reveal">
+        <div class="chan-head"><div class="chan-num">ROTATION 03</div><div class="chan-name">Email Marketing</div></div>
+        <div class="chan-body"><ul>
+          <li>N.dulge members near the store get the launch invite</li>
+          <li>Everyone else gets the editorial version, driving online sales of the five</li>
+        </ul></div>
+      </div>
+      <div class="chan-card reveal">
+        <div class="chan-head"><div class="chan-num">ROTATION 04</div><div class="chan-name">Paid Media</div></div>
+        <div class="chan-body"><ul>
+          <li>Geo-targeted ads in a tight radius around the store, using curator content</li>
+          <li>Retargeting engaged users with the event invite — small budget, tightly measured</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="mock-row">
+      <div class="reveal">
+        <div class="mock-label">What it would look like · The N.dulge email</div>
+        <div class="mock-email">
+          <div class="me-bar"><b>Your neighbourhood's Edit is live ♡</b>To: N.dulge members near Marylebone</div>
+          <div class="me-hero">
+            <div class="me-kicker">The Neighbourhood Edit · No. 01</div>
+            <div class="me-title">Marylebone,<br>curated</div>
+            <div class="me-script">five products your neighbourhood swears by</div>
+          </div>
+          <div class="me-body">
+            This month, your Space NK store hands the shelf to one of its own — a Marylebone local and long-time N.dulge member shares the five products she can't live without, and why. <b>See the shelf in store, or meet her at the launch evening this Thursday.</b><br><br>
+            <span class="me-cta">Save my spot</span><br>
+            <span style="font-size:11px;color:#8a8582">You're receiving the neighbourhood version of this email because Marylebone is your store. ♡</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="mock-label">What it would look like · The launch post</div>
+        <div class="mock-ig">
+          <div class="ig-head">
+            <div class="ig-avatar">MK</div>
+            <div>
+              <div class="ig-name">the.neighbourhood.edit</div>
+              <div class="ig-loc">Marylebone, London</div>
+            </div>
+          </div>
+          <div class="ig-img">
+            <img src="spacenk-store.jpg" alt="Space NK store front" loading="lazy">
+            <div class="ig-img-tag">
+              <div class="k">The Neighbourhood Edit · No. 01</div>
+              <div class="t">Marylebone's<br>Top Five</div>
+              <div class="s">curated by your neighbour ♡</div>
+            </div>
+          </div>
+          <div class="ig-caption"><b>Five products. One neighbourhood.</b> This month the shelf belongs to Marylebone — come meet the curator at Thursday's launch evening, and tag your own top five with #MyNeighbourhoodEdit to curate the next one.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="mock-label">How I'd measure it</div>
+      <div class="kpi-strip">
+        <div class="kpi"><div class="ch">Local</div><div class="m">Footfall uplift & launch-event attendance</div></div>
+        <div class="kpi"><div class="ch">Social</div><div class="m">Engagement rate & UGC volume per neighbourhood</div></div>
+        <div class="kpi"><div class="ch">Email</div><div class="m">Open, click & conversion by segment</div></div>
+        <div class="kpi"><div class="ch">Paid</div><div class="m">Cost per store visit & retargeting conversion</div></div>
+        <div class="kpi hl"><div class="ch">Headline</div><div class="m">New N.dulge sign-ups per featured neighbourhood</div></div>
+      </div>
+    </div>
+
+    <p class="camp-foot reveal">A spec concept created for this application — built on Space NK's own positioning, operable at real budgets, and designed to show one idea connecting all four rotations of this scheme. Exactly the kind of thinking I'd love to develop inside your team. Store photograph shown for illustrative purposes.</p>
+  </div>
+</section>
+
+<!-- ============ PITCH — written on their notebook paper ============ -->
+<section class="paper" id="why">
+  <div class="paper-in">
+    <div class="sticker wiggle" style="top:26px;right:44px">creative task ✓ done</div>
+    <div class="heart-deco" style="top:34px;left:110px;font-size:22px">♥</div>
+    <div class="heart-deco" style="bottom:44px;right:130px;font-size:16px;animation-delay:1.5s">♥</div>
+    <svg class="bag-sticker wiggle" style="bottom:36px;left:64px;width:70px" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="rotate(-7 50 55)">
+        <rect x="12" y="32" width="76" height="72" fill="#f6dbe0"/>
+        <path d="M32 32 v-8 a18 18 0 0 1 36 0 v8" fill="none" stroke="#c9707f" stroke-width="5"/>
+        <path d="M42 22 q8 -10 16 0 q-8 8 -16 0" fill="#c9707f"/>
+        <text x="50" y="74" text-anchor="middle" fill="#101010" font-family="Archivo,sans-serif" font-weight="900" font-size="15" letter-spacing="1">HIRE</text>
+        <text x="50" y="92" text-anchor="middle" fill="#c9707f" font-family="Archivo,sans-serif" font-weight="900" font-size="15" letter-spacing="1">ME ♥</text>
+      </g>
+    </svg>
+    <div>
+      <div class="paper-title reveal"><mark>why I should have a place</mark> ♡</div>
+      <p class="reveal">I've spent three years building marketing experience the hands-on way — through marketing and consulting internships, at pop-ups for the beauty brands your customers queue for, in reports presented to heads of marketing, and in channels I grew myself — all alongside a degree I finished with First Class Honours. Most of it I had to teach myself. What I want now — honestly, what I want more than anything — is what this scheme offers: <b>to learn from specialists across email, social, paid and local marketing, take real feedback, and understand how the channels connect at scale.</b> I will make every one of those four-month placements count.</p>
+      <p class="reveal">I chose to present myself as a product page because that's how I think — customer first, brand always, every detail deliberate. Space NK built a community around the joy of discovering beauty. <b>I'd love my next discovery to be made by you.</b></p>
+      <div class="paper-sign reveal">— Mariia</div>
+    </div>
+    <div class="reveal" style="position:relative">
+      <div class="polaroid" style="padding-bottom:12px">
+        <div class="tape"></div>
+        <div class="reel-frame" style="width:100%;border-radius:8px;box-shadow:none">
+          <iframe src="https://www.youtube.com/embed/fGwixxzTfEk?playsinline=1&rel=0" title="Meet Mariia — intro video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <a href="https://mariiakoptieva.github.io/spacenk" target="_blank" rel="noopener" class="portfolio-btn">View My Full Portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-links">
+    <a href="mailto:koptieva1902@gmail.com">koptieva1902@gmail.com</a>
+    <a href="tel:+447887300648">+44 788 730 0648</a>
+    <a href="https://linkedin.com/in/mariiakoptieva" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://mariiakoptieva.github.io/spacenk" target="_blank" rel="noopener">Full Portfolio</a>
+  </div>
+  <p class="foot-note">An unofficial creative submission by Mariia Koptieva for the Space NK Marketing Graduate Scheme 2026, made with genuine love for the brand. Space NK name and products belong to Space NK — the enthusiasm is all mine.</p>
+</footer>
+
+<!-- Bag drawer -->
+<div class="drawer-veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Team bag">
+  <div class="drawer-head">Your Team Bag <button class="drawer-close" id="drawerClose" aria-label="Close">×</button></div>
+  <div class="drawer-body" id="drawerBody">
+    <p class="drawer-empty" id="emptyMsg">Your team bag is empty.<br>Add a marketing graduate to get started.</p>
+  </div>
+  <div class="drawer-foot">
+    <a class="checkout-btn" href="mailto:koptieva1902@gmail.com?subject=Space%20NK%20Marketing%20Graduate%20Scheme%20%E2%80%94%20Mariia%20Koptieva&body=Hi%20Mariia%2C%0A%0AWe%27d%20love%20to%20invite%20you%20to%20the%20next%20stage.">Checkout — Email Mariia</a>
+    <small>Free delivery to Shropshire House, WC1E 6JA</small>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Added to your team ✓</div>
+
+<script>
+// rotation chips
+document.getElementById('chips').addEventListener('click',e=>{
+  if(!e.target.classList.contains('chip'))return;
+  e.target.classList.toggle('on');
+});
+
+// accordions
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>{
+    const item=h.parentElement, body=item.querySelector('.acc-body');
+    const open=item.classList.toggle('open');
+    body.style.maxHeight=open?body.scrollHeight+'px':'0';
+  });
+});
+
+// bag / add to team
+const bagCount=document.getElementById('bagCount');
+const drawer=document.getElementById('drawer');
+const veil=document.getElementById('veil');
+const toast=document.getElementById('toast');
+let inBag=false;
+
+function openDrawer(){drawer.classList.add('show');veil.classList.add('show')}
+function closeDrawer(){drawer.classList.remove('show');veil.classList.remove('show')}
+document.getElementById('bagBtn').addEventListener('click',openDrawer);
+document.getElementById('drawerClose').addEventListener('click',closeDrawer);
+veil.addEventListener('click',closeDrawer);
+
+document.getElementById('addBtn').addEventListener('click',function(e){
+  if(!inBag){
+    inBag=true;
+    bagCount.textContent='1';
+    bagCount.classList.add('pop');
+    setTimeout(()=>bagCount.classList.remove('pop'),350);
+    const item=document.createElement('div');
+    item.className='drawer-item';
+    item.innerHTML=`<img src="https://mariiakoptieva.github.io/spacenk/IMG_8399.jpeg" alt="Mariia Koptieva">
+      <div><div class="di-name">Mariia Koptieva</div>
+      <div class="di-desc">Multi-Channel Marketing Graduate<br>12-month rotational formula · Qty 1</div>
+      <div class="di-price">First Class Honours · Sept 2026</div></div>`;
+    document.getElementById('emptyMsg').replaceWith(item);
+  }
+  this.classList.add('added');
+  this.textContent='In your team ✓';
+  // hearts
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    const r=this.getBoundingClientRect();
+    for(let i=0;i<10;i++){
+      const h=document.createElement('div');
+      h.className='heart-float';
+      h.textContent='♥';
+      h.style.left=(r.left+Math.random()*r.width)+'px';
+      h.style.top=(r.top)+'px';
+      h.style.animationDelay=(Math.random()*0.4)+'s';
+      h.style.fontSize=(12+Math.random()*14)+'px';
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),2200);
+    }
+  }
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),2200);
+  setTimeout(openDrawer,900);
+});
+
+// scroll reveal
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
